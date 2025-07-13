@@ -18,6 +18,8 @@ import Link from '@tiptap/extension-link'
 import TextAlign from '@tiptap/extension-text-align'
 import { useEditor, EditorContent } from '@tiptap/react'
 
+import { FontSizeExtension } from '@/extensions/font-size'
+
 import { useEditorStore } from '@/store/use-editor-store'
 
 export const Editor = () => {
@@ -80,7 +82,8 @@ export const Editor = () => {
       }),
       TextAlign.configure({
         types: ["paragraph", "heading"]
-      })
+      }),
+      FontSizeExtension,
     ],
     content: `
       <table>
